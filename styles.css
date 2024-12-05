@@ -1,0 +1,122 @@
+:root {
+    --gradient-start: #8B5CF6;
+    --gradient-middle: #3B82F6;
+    --gradient-end: #EC4899;
+}
+
+body {
+    font-family: 'Rubik', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+.glass-bg {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 2rem;
+    min-height: calc(100vh - 2rem);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+header .lead {
+    font-size: 1.5rem;
+    color: #4B5563;
+    font-weight: 300;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#searchInput, #categoryFilter {
+    border: none;
+    background: transparent;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1F2937;
+    width: 100%;
+}
+
+#searchInput:focus, #categoryFilter:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--gradient-middle);
+}
+
+.tool-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card h3 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.tool-card .category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--gradient-start);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.tool-card .description {
+    color: #4B5563;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.tool-card .btn {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.tool-card .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
